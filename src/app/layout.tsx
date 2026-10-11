@@ -18,6 +18,7 @@ export const metadata: Metadata = {
       "Thoughtful fintech products. Maintainable software. Explore my experience and interactive product demos.",
     type: "website",
     locale: "en_SG",
+    siteName: "Sree Manikanta",
   },
   twitter: {
     card: "summary",

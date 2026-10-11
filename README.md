@@ -69,7 +69,7 @@ Still needed from the owner:
 
 - Actual resume PDF and preferred public filename.
 - Verified LinkedIn profile URL.
-- Final deployment URL for canonical metadata configuration.
+- Final deployment URL for metadata base configuration.
 - Verified transaction/bulk-operation and KYC/onboarding details, if those employment case studies should be expanded.
 - Optional real profile photo and any additional verified project details.
 
