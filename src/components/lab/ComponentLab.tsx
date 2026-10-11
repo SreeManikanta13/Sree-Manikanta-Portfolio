@@ -45,7 +45,7 @@ export default function ComponentLab() {
     },
   ];
   return (
-    <main className="shell py-12">
+    <div className="shell py-12">
       <header className="page-heading">
         <p className="eyebrow">Interactive playground / Component Lab</p>
         <h1>Small details. Complete workflows.</h1>
@@ -196,6 +196,6 @@ export default function ComponentLab() {
           Back to workspace
         </Button>
       </Dialog>
-    </main>
+    </div>
   );
 }

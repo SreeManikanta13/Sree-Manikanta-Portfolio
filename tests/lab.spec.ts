@@ -175,6 +175,7 @@ test("loading error empty and data states preserve the local ledger", async ({
 test("mobile workspace remains usable and provides chart text equivalents", async ({
   page,
 }) => {
+  await expect(page.getByRole("main")).toHaveCount(1);
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(
     page.getByRole("heading", { name: "Amount by category" }),
