@@ -50,9 +50,9 @@ Server components render the professional content and route metadata. Client com
 
 ## Updating content
 
-1. **Profile:** edit `src/data/profile.ts` for contact details and destinations. `linkedInUrl`, `resumePath`, and `siteUrl` start as `null`; no URLs or assets are fabricated.
-2. **Resume:** place the actual PDF in `public/` (for example `public/resume.pdf`) and set `resumePath: "/resume.pdf"`. Resume controls then become links opening the PDF. Check the PDF contains only information you intend to publish.
-3. **LinkedIn:** set `linkedInUrl` to your verified profile URL. Until then, the contact section shows an unavailable message.
+1. **Profile:** edit `src/data/profile.ts` for contact details and destinations. `siteUrl` stays `null` until the site is deployed.
+2. **Resume:** the published PDF is `public/Sree-Manikanta-Resume.pdf` (`resumePath`). Replace that file to update it, and check it contains only information you intend to publish.
+3. **LinkedIn:** `linkedInUrl` is shown in the contact section. Set it to `null` to hide the link.
 4. **SEO:** set `siteUrl` to the actual deployment origin to configure the metadata base. Update title, description, Open Graph, and Twitter metadata in `src/app/layout.tsx` as needed.
 5. **Experience:** edit the typed content in `src/data/experience.ts`. Professional tools remain separate from tools newly demonstrated in this portfolio.
 6. **Case studies:** edit `src/data/projects.ts`; each case includes context, role, approach, decisions, trade-offs, outcome, technologies, and an optional demo link. New slugs become generated routes.
@@ -67,8 +67,6 @@ Professional content uses only the supplied profile. There are no invented metri
 
 Still needed from the owner:
 
-- Actual resume PDF and preferred public filename.
-- Verified LinkedIn profile URL.
 - Final deployment URL for metadata base configuration.
 - Verified transaction/bulk-operation and KYC/onboarding details, if those employment case studies should be expanded.
 - Optional real profile photo and any additional verified project details.

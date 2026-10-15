@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("portfolio navigation, contact, and honest resume state", async ({
+test("portfolio navigation, contact, resume, and LinkedIn", async ({
   page,
 }) => {
   await page.goto("/");
@@ -16,8 +16,19 @@ test("portfolio navigation, contact, and honest resume state", async ({
     page.getByRole("link", { name: "Explore My Work" }),
   ).toHaveAttribute("href", "/projects");
   await expect(
-    page.getByText("View Resume · coming soon").first(),
-  ).toHaveAttribute("aria-disabled", "true");
+    page.getByRole("link", { name: "View Resume" }).first(),
+  ).toHaveAttribute("href", "/Sree-Manikanta-Resume.pdf");
+  const contact = page.locator("#contact");
+  await expect(
+    contact.getByRole("link", { name: "View Resume" }),
+  ).toHaveAttribute("href", "/Sree-Manikanta-Resume.pdf");
+  await expect(contact.getByRole("link", { name: "LinkedIn" })).toHaveAttribute(
+    "href",
+    "https://www.linkedin.com/in/sree-manikanta",
+  );
+  const resume = await page.request.get("/Sree-Manikanta-Resume.pdf");
+  expect(resume.ok()).toBe(true);
+  expect(resume.headers()["content-type"]).toContain("application/pdf");
   await expect(
     page.getByRole("link", { name: "sreemanikanta13@gmail.com" }),
   ).toHaveAttribute("href", "mailto:sreemanikanta13@gmail.com");

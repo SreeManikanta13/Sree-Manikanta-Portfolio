@@ -4,8 +4,8 @@ export const profile = {
   location: "Singapore",
   email: "sreemanikanta13@gmail.com",
   phone: "+65 84042760",
-  linkedInUrl: null as string | null,
-  resumePath: null as string | null,
+  linkedInUrl: "https://www.linkedin.com/in/sree-manikanta" as string | null,
+  resumePath: "/Sree-Manikanta-Resume.pdf" as string | null,
   siteUrl: null as string | null,
 };
 
