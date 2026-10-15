@@ -34,8 +34,10 @@ test.describe("@unit formatting and published content", () => {
         ?.pending,
     ).toBe(true);
   });
-  test("missing external assets remain unconfigured rather than fabricated", () => {
-    expect(profile.resumePath).toBeNull();
-    expect(profile.linkedInUrl).toBeNull();
+  test("resume and LinkedIn point to the supplied destinations", () => {
+    expect(profile.resumePath).toBe("/Sree-Manikanta-Resume.pdf");
+    expect(profile.linkedInUrl).toBe(
+      "https://www.linkedin.com/in/sree-manikanta",
+    );
   });
 });
