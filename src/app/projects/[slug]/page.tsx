@@ -3,6 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 
+// Block on params so unknown slugs return a real 404 instead of a streamed 200.
+export const instant = false;
+
 export function generateStaticParams() {
   return projects.map(({ slug }) => ({ slug }));
 }

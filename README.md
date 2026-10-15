@@ -87,7 +87,7 @@ npm test
 npm audit
 ```
 
-`npm run format` applies formatting. Playwright starts a local development server automatically; local runs reuse an existing server, while CI requires a fresh one. Test reports, browser downloads, and build output must not be committed. Tests cover formatting/content invariants, navigation, project exploration, dashboard interactions, and component workflows.
+`npm run format` applies formatting. Playwright starts a server automatically: a development server locally (reusing one if already running) and the production build (`npm start`, after `npm run build`) in CI. Test reports, browser downloads, and build output must not be committed. Tests cover formatting/content invariants, navigation, project exploration, dashboard interactions, and component workflows.
 
 The lint configuration uses TypeScript, React Hooks, and JSX accessibility rules. The scaffold's Next-specific ESLint preset was replaced because its transitive globbing dependency had an unpatched advisory at implementation time. The application runtime remains Next.js.
 

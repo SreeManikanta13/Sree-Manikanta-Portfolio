@@ -2,6 +2,7 @@ name: Portfolio quality
 
 on:
   push:
+    branches: [main]
   pull_request:
 
 permissions:
